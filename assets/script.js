@@ -37,34 +37,8 @@ const teamMembers = [
     img: "assets/img/female3.png",
   },
 ];
-//  una funzione per mostrare una card per ciascun teamMembers.
-let template = "";
-const cards = document.getElementById("card");
-function myCards() {
-  for (let i = 0; i < teamMembers.length; i++)
-    template += ` <div class="card mb-3" >
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="${teamMembers[i].img}" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">${teamMembers[i].name}</h5>
-        <p class="card-text">${teamMembers[i].role}</p>
-        <p class="card-text"><small class="text-body-secondary">${teamMembers[i].email}</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-  
- `;
-}
-myCards();
 
-// Agguingere le cards dell teamMembers alla mia paggina html/////
-cards.innerHTML = template;
-
-// Creazione d'un titolo
+// Creazione d'un titolo/////////////////////////////////
 const myTitle = document.getElementById("title");
 const titolo = document.createElement("p");
 titolo.innerHTML = "Meet our team";
@@ -82,3 +56,56 @@ myParag.innerHTML =
 paragrafo.appendChild(myParag);
 // Agguinto una classe al paragrafo
 myParag.classList.add("centrare");
+
+const myForm = document.getElementById("form");
+myForm.addEventListener("submit", myFunction);
+
+// Aggiungere un nuovo team member
+let newMember = {};
+
+function myFunction(event) {
+  event.preventDefault();
+  const name = document.getElementById("nome").value;
+  const role = document.getElementById("ruolo").value;
+  const email = document.getElementById("mail").value;
+  const img = document.getElementById("img").value;
+  newMember = {
+    name,
+    role,
+    email,
+    img,
+  };
+
+  console.log(newMember);
+  teamMembers.push(newMember);
+  console.log(teamMembers);
+  myCards();
+}
+
+//  una funzione per mostrare una card per ciascun teamMembers.
+
+function myCards() {
+  let template = "";
+  const cards = document.getElementById("card");
+  for (let i = 0; i < teamMembers.length; i++) {
+    template += ` <div class="card mb-3 " style=" color:white;background-color:#E88D67" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="${teamMembers[i].img}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8" style=" color:white;">
+      <div class="card-body">
+        <h5 class="card-title">${teamMembers[i].name}</h5>
+        <p class="card-text">${teamMembers[i].role}</p>
+        <p class="card-text"><small style=" color:#F3F7EC;">${teamMembers[i].email}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+ `;
+  }
+  // Agguingere le cards dell teamMembers alla mia paggina html/////
+  cards.innerHTML = template;
+}
+myCards();

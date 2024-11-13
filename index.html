@@ -12,7 +12,8 @@
       href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
   </head>
-  <body class="container-lg">
+   
+  <body class="container-lg " style="background-color: #F3F7EC">
     <!-- Titolo -->
     <p id="title"></p>
     <!-- Paragrafo -->
@@ -21,8 +22,74 @@
     <section
       id="card"
       class="d-flex m-w1200 flex-wrap"
-      style="margin: 200px auto; gap: 20px"
+      style="margin: 70px auto; gap: 20px"
     ></section>
+
+    <!-- Form-Nuovo team-member -->
+    <form class="row g-3 needs-validation d-flex justify-content-center 
+        rounded-4 mb-5 " id="form" style="background-color: #48CFCB;max-width: 800px;
+    margin: 0 auto; " novalidate>
+        <!-- Name -->
+      <div class="col-md-4">
+        <label for="nome" class="form-label">Nome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          value=""
+          required
+        />
+        <div class="valid-feedback">Nome non valido</div>
+     
+      <!-- Role -->
+      
+        <label for="ruolo" class="form-label">Ruolo</label>
+        <input
+          type="text"
+          class="form-control"
+          id="ruolo"
+          value=""
+          required
+        />
+        <div class="valid-feedback">Ruolo non valido/div>
+      </div>
+      <!-- Email -->
+      <div class="col-md-4">
+        <label for="name" class="form-label"
+          >Email</label
+        >
+        <div class="input-group has-validation " style="width: 300%;">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input
+            type="text"
+            class="form-control"
+            id="mail"
+            aria-describedby="inputGroupPrepend"
+            required
+           
+          />
+          <div class="invalid-feedback">Mail non valido</div>
+        </div>
+    
+      <!-- img -->
+        <label for="img" class="form-label">Imaggine</label>
+        <input
+          type="url"
+          class="form-control"
+          id="img"
+          value=""
+          required
+          style="width: 300%;"
+        />
+        <div class="valid-feedback">imaggine  non valida
+      </div>
+        
+       <div class="d-flex">
+        <button class=" m-3 rounded-4" type="submit" style="background-color: #E88D67; color: wheat;">Si unisca</button>
+        <button class=" m-3 rounded-4"  type="reset"style="background-color: #E88D67; color: wheat;">Reset</button>
+      </div>  
+    </div>
+    </form>
     <!-- Link-script-js -->
     <script src="./assets/script.js"></script>
   </body>
