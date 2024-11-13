@@ -57,10 +57,9 @@ paragrafo.appendChild(myParag);
 // Agguinto una classe al paragrafo
 myParag.classList.add("centrare");
 
+// Aggiungere un nuovo team member
 const myForm = document.getElementById("form");
 myForm.addEventListener("submit", myFunction);
-
-// Aggiungere un nuovo team member
 let newMember = {};
 
 function myFunction(event) {
