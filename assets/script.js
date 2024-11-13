@@ -56,7 +56,10 @@ myParag.innerHTML =
 paragrafo.appendChild(myParag);
 // Agguinto una classe al paragrafo
 myParag.classList.add("centrare");
-
+// Creazione del secondo titolo
+const secondTitle = document.getElementById("secondTitle");
+secondTitle.innerHTML = "Diventa parte del nostro team di esperti";
+secondTitle.classList.add("centrare", "p-prop");
 // Aggiungere un nuovo team member
 const myForm = document.getElementById("form");
 myForm.addEventListener("submit", myFunction);

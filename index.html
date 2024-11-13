@@ -13,7 +13,7 @@
     />
   </head>
    
-  <body class="container-lg " style="background-color: #F3F7EC">
+  <body class="container-lg d-flex flex-column centrare " style="background-color: #F3F7EC">
     <!-- Titolo -->
     <p id="title"></p>
     <!-- Paragrafo -->
@@ -21,16 +21,19 @@
     <!-- Cards del team-members -->
     <section
       id="card"
-      class="d-flex m-w1200 flex-wrap"
+      class="d-flex m-w1200 flex-wrap justify-content-center"
       style="margin: 70px auto; gap: 20px"
-    ></section>
-
+    >
+    </section>
+     
+     
     <!-- Form-Nuovo team-member -->
+     <p id="secondTitle"></p> 
     <form class="row g-3 needs-validation d-flex justify-content-center 
         rounded-4 mb-5 " id="form" style="background-color: #48CFCB;max-width: 800px;
     margin: 0 auto; " novalidate>
         <!-- Name -->
-      <div class="col-md-4">
+      <div class="">
         <label for="nome" class="form-label">Nome</label>
         <input
           type="text"
@@ -54,11 +57,11 @@
         <div class="valid-feedback">Ruolo non valido/div>
       </div>
       <!-- Email -->
-      <div class="col-md-4">
+      <div class="">
         <label for="name" class="form-label"
           >Email</label
         >
-        <div class="input-group has-validation " style="width: 300%;">
+        <div class="input-group has-validation " >
           <span class="input-group-text" id="inputGroupPrepend">@</span>
           <input
             type="text"
@@ -79,12 +82,12 @@
           id="img"
           value=""
           required
-          style="width: 300%;"
+         
         />
         <div class="valid-feedback">imaggine  non valida
       </div>
         
-       <div class="d-flex">
+       <div class="d-flex justify-content-center">
         <button class=" m-3 rounded-4" type="submit" style="background-color: #E88D67; color: wheat;">Si unisca</button>
         <button class=" m-3 rounded-4"  type="reset"style="background-color: #E88D67; color: wheat;">Reset</button>
       </div>  
